@@ -4,7 +4,7 @@ import Footer from "./component/footer";
 import Projects from "./component/projects";
 import Blogs from "./component/myBlogs";
 import ProfileContext from "./component/utils/profileData";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, HashRouter, Route } from "react-router-dom";
 import MainPage from "./component/pages/main";
 import API from "./component/utils/API";
 
@@ -23,26 +23,28 @@ function App() {
       .catch(err => {
         console.log(err)
       });
-}, []);
+  }, []);
 
 
 
-return (
-  <Router>
+  return (
+    // <Router>
+    <HashRouter basename="/">
+      <ProfileContext.Provider value={{ profileData: profileState }}>
+        <Header />
+        <div className="container-fluid wrapper">
 
-    <ProfileContext.Provider value={{ profileData: profileState }}>
-      <Header />
-      <div className="container-fluid wrapper">
+          <Route exact path="/" component={MainPage} />
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/blogs" component={Blogs} />
 
-        <Route exact path="/" component={MainPage} />
-        <Route exact path="/projects" component={Projects} />
-        <Route exact path="/blogs" component={Blogs} />
+        </div>
+        <Footer />
+      </ProfileContext.Provider>
 
-      </div>
-      <Footer />
-    </ProfileContext.Provider>
+    </HashRouter>   
 
-  </Router>
+  // </Router >
 
 );
 }
