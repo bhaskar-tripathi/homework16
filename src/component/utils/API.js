@@ -81,12 +81,12 @@ export default {
     })
   },
   getMyBlogs: function (user = "bhaskar.tripathi") {
-    return axios.get(`https://content.services.sap.com/cs/searches/userProfile?userName=${user}&objectTypes=blogpost&sort=published,desc&size=20&page=0`),
+    return axios.get(`https://content.services.sap.com/cs/searches/userProfile?userName=${user}&objectTypes=blogpost&sort=published,desc&size=20&page=0`,
     {
       headers:{
         "Access-Control-Allow-Origin": "*"
       }
-    }
+    })
       .then(res => {
         return res.data._embedded.contents;
       })
