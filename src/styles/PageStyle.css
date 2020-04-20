@@ -1,0 +1,90 @@
+.custHeader {
+  background-color: #1aa8c4;
+}
+
+.custFooter {
+  background-color: #1aa8c4;
+  color: white;
+}
+.custFooter a {
+  color: white;
+}
+
+.wrapper {  
+  min-height: 84.4vh;
+}
+
+
+.card {
+  width: 18rem;
+}
+
+.scroll-box {
+  min-height: 100px;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.scroll-bar-wrap {
+  position: relative;
+  margin: 2em auto;
+}
+.scroll-box {
+  width: 100%;
+  overflow-y: scroll;
+}
+.scroll-box::-webkit-scrollbar {
+  width: .4em; 
+}
+.scroll-box::-webkit-scrollbar,
+.scroll-box::-webkit-scrollbar-thumb {
+  overflow:visible;
+  border-radius: 4px;
+}
+.scroll-box::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+                                       left bottom,
+                                       left top,
+                                       color-stop(0.44, #0c7c92),
+                                       color-stop(0.72, #0d5766),
+                                       color-stop(0.86, #013944));
+}
+.cover-bar {
+  position: absolute;
+  background: #fff;;
+  height: 100%;  
+  top: 0;
+  right: 0;
+  width: .4em;
+  -webkit-transition: all .5s;
+  opacity: 1;
+}
+.scroll-box:hover .cover-bar {
+   opacity: 0;
+  -webkit-transition: all .5s;
+}
+
+.nav-item a{
+  font-size: 1.2em !important; 
+}
+
+.blogContent {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.blogTitle{
+  display: block;
+  font-size: 2em;
+}
+
+.tag {
+  background-color: rgba(86,61,124,0.15);
+    border: 1px solid rgba(86,61,124,0.15);
+}
+
+.blogStats{
+  color: rgb(168, 157, 157);
+  font-size: 1.2em;
+}
