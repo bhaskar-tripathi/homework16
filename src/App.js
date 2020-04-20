@@ -28,8 +28,7 @@ function App() {
 
 
   return (
-    <Router>
-      {/* <HashRouter basename="/"> */}
+      <HashRouter basename="/">
       <ProfileContext.Provider value={{ profileData: profileState }}>
         <Header />
         <div className="container-fluid wrapper">
@@ -42,9 +41,7 @@ function App() {
         <Footer />
       </ProfileContext.Provider>
 
-    {/* </HashRouter>    */}
-
-  </Router >
+    </HashRouter>   
 
 );
 }
