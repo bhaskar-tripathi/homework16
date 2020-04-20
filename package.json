@@ -2,6 +2,7 @@
   "name": "portfolioapp",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://content.services.sap.com",
   "homepage": "https://bhaskar-tripathi.github.io/homework16",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
