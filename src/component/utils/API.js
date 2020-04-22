@@ -84,7 +84,9 @@ export default {
     return axios.get(`https://content.services.sap.com/cs/searches/userProfile?userName=${user}&objectTypes=blogpost&sort=published,desc&size=20&page=0`,
       {
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'crossdomain': true
     }
       })
       .then(res => {
