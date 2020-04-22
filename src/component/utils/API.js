@@ -82,7 +82,11 @@ export default {
   },
   getMyBlogs: function (user = "bhaskar.tripathi") {
     return axios.get(`https://content.services.sap.com/cs/searches/userProfile?userName=${user}&objectTypes=blogpost&sort=published,desc&size=20&page=0`,
-    )
+      {
+        headers: {
+          'Content-Type': 'application/json'
+    }
+      })
       .then(res => {
         return res.data._embedded.contents;
       })
