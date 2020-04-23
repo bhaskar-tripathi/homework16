@@ -18,8 +18,8 @@ function BlogItem(props) {
                 <div className="blogContent">{props.blog.content}</div>
                 <div className="row justify-content-left my-3">
                     <div className="col ">
-                    <i class="far fa-comment-alt mr-4 mr-2 blogStats"><span className="ml-2">{props.blog.comments}</span></i> 
-                    <i class="far fa-thumbs-up mr-4 mr-2 blogStats"><span className="ml-2">{props.blog.likes}</span></i>
+                    <i className="far fa-comment-alt mr-4 mr-2 blogStats"><span className="ml-2">{props.blog.comments}</span></i> 
+                    <i className="far fa-thumbs-up mr-4 mr-2 blogStats"><span className="ml-2">{props.blog.likes}</span></i>
                     </div>
                 </div>
 
