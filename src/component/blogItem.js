@@ -1,7 +1,6 @@
 import React from "react";
 
 function BlogItem(props) {
-    console.log(props.blog.tags[0].displayName);
     return (
         <li className=" my-2 border p-4">
             <div className="">

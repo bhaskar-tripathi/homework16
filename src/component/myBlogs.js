@@ -10,7 +10,6 @@ function MyBlogs() {
         API.getMyBlogs()
             .then(res => {
                 setBlogsState(res);
-                console.log(res);
             })
             .catch(err => console.log(err))
     }, [])
